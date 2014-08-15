@@ -1,0 +1,73 @@
+---
+layout: page
+title: Install on Linux
+permalink: /install/linux/
+---
+
+
+The installation of PaperBank on a Linux box will give you an easy mode to print wallets with your USB thermal printer.
+
+[PRO] You can run vanitygen branch under a powerful linux box to generate strong vanity addresses.
+
+
+Things to do:
+
+
+- get a brand new sd card or do a safe format [PRO]
+
+- get NOOBS release from raspbian official website! (check the sha [PRO]) and copy it to the sd
+
+- follow the raspbian installation procedure and run it
+
+- after install, open LXTerminal
+
+- install ssl-dev
+
+commands assume you have a debian based distro
+
+{% highlight sh %}
+sudo apt-get install libssl-dev -y
+{% endhighlight %}
+
+- install ruby development files
+
+{% highlight sh %}
+sudo apt-get install ruby1.9.1-dev -y
+{% endhighlight %}
+
+- install rmagick dependencies
+
+{% highlight sh %}
+sudo apt-get install libmagickcore-dev libmagickwand-dev -y
+{% endhighlight %}
+
+- get the code
+
+{% highlight sh %}
+git clone https://github.com/makevoid/paperbank
+{% endhighlight %}
+
+You can switch branch at this point [PRO]
+
+- install ruby gems
+
+{% highlight sh %}
+$ sudo gem install escper         --no-ri --no-rdoc
+$ sudo gem install rqrcode_png    --no-ri --no-rdoc
+$ sudo gem install bitcoin-ruby   --no-ri --no-rdoc
+$ sudo gem install ffi            --no-ri --no-rdoc
+{% endhighlight %}
+
+
+if you are truly paranoid you can make the above steps offline, by transferring this repo and the ruby gems via usb stick and installing them manually
+
+{% highlight sh %}
+sudo chmod 0666 /dev/usb/lp1`
+{% endhighlight %}
+
+- test the printer
+
+{% highlight sh %}
+echo "\nOK MASTER\n\n\n" > templates/test.txt
+cat templates/test.txt > /dev/usb/lp0
+{% endhighlight %}
