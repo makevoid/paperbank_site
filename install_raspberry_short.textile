@@ -1,48 +1,45 @@
 ---
 layout: page
-permalink: /install/raspberry_short/
+permalink: /install/raspberry/short/
 ---
 
-installation on Raspberry PI
+h1. Installation on Raspberry PI (compact version)
 
 
+* get a brand new sd card or format one
+* get NOOBS release from "Rasp PI's official website":http://www.raspberrypi.org/downloads/ ! Copy it to the sd
+* follow the raspbian installation procedure and run it
 
-- get a brand new sd card or do a safe format [PRO]
-- get NOOBS release from raspbian official website! (check the sha [PRO]) and copy it to the sd
-- follow the raspbian installation procedure and run it
+* after install, open *LXTerminal*
 
-- after install, open LXTerminal
-
-- install ssl-dev, ruby development files, rmagick dependencies
+* install ssl-dev, ruby development files, rmagick dependencies
 
 {% highlight sh %}
 sudo apt-get install libssl-dev ruby1.9.1-dev libmagickcore-dev libmagickwand-dev -y
 {% endhighlight %}
 
 
-- get the code
+* get the code
 
 {% highlight sh %}
 git clone https://github.com/makevoid/paperbank
 {% endhighlight %}
 
-
-- install ruby gems
+* install ruby gems
 
 {% highlight sh %}
 $ sudo gem install escper rqrcode_png  bitcoin-ruby ffi --no-ri --no-rdoc
 {% endhighlight %}
 
 
-if you are truly paranoid you can make the above steps offline, by transferring this repo and the ruby gems via usb stick and installing them manually
 
-- change
+* change
 
 {% highlight sh %}
 sudo chmod 0666 /dev/usb/lp0`
 {% endhighlight %}
 
-- test the printer
+* test the printer
 
 {% highlight sh %}
 echo "\nOK MASTER\n\n\n" > templates/test.txt

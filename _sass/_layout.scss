@@ -244,6 +244,7 @@ article {
         font-size: 1.3em;
     }
 }
+
 .text{
     font-family: monospace;
     font-size: 100%;
@@ -254,6 +255,7 @@ article {
     width: 44%;
 
 }
+
 input.text {
     border: 0;
 
@@ -266,9 +268,11 @@ input.text {
 .left{
     float: left;
 }
+
 .right{
     float: right;
 }
+
 div.clear {
     clear: both;
 }
@@ -294,7 +298,7 @@ div.clear {
 
 }
 p{
-    margin-bottom: 0;
+    margin-bottom: 6px;
 }
 
 .video_img {
