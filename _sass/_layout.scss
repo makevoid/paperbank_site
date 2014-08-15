@@ -243,7 +243,7 @@ article {
         font-weight: bold;
         font-size: 1.3em;
     }
-} 
+}
 .text{
     font-family: monospace;
     font-size: 100%;
@@ -295,14 +295,16 @@ div.clear {
 }
 p{
     margin-bottom: 0;
-} 
+}
 
 .video_img {
     opacity: 0.6;
     -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
 }
 
 .video_img:hover {
     opacity: 1;
-    filter: none; 
+    -webkit-filter: grayscale(20%);
+    filter: grayscale(20%);
 }
