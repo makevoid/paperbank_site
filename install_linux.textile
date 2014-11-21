@@ -33,15 +33,6 @@ sudo apt-get install ruby1.9.1-dev -y
 sudo apt-get install libmagickcore-dev libmagickwand-dev -y
 {% endhighlight %}
 
-* install git and get the code (or "get the zip via github":https://github.com/makevoid/paperbank/archive/bip38.zip)
-
-{% highlight sh %}
-apt-get install git -y
-git clone https://github.com/makevoid/paperbank
-{% endhighlight %}
-
-You can switch branch at this point [PRO]
-
 * install ruby gems
 
 {% highlight sh %}
@@ -52,7 +43,20 @@ $ sudo gem install ffi            --no-ri --no-rdoc
 {% endhighlight %}
 
 
-if you are truly paranoid you can make the above steps offline, by transferring this repo and the ruby gems via usb stick and installing them manually
+* install git and get the code (or "get the zip via github":https://github.com/makevoid/paperbank/archive/bip38.zip)
+
+{% highlight sh %}
+apt-get install git -y
+git clone https://github.com/makevoid/paperbank
+cd paperbank
+{% endhighlight %}
+
+You can switch branch at this point [PRO]
+
+
+If you are truly paranoid you can make the above steps offline, 
+by transferring this repo and the ruby gems via usb stick and installing them manually. 
+It's not really needed for non-big sums.
 
 {% highlight sh %}
 sudo chmod 0666 /dev/usb/lp1`
@@ -64,3 +68,16 @@ sudo chmod 0666 /dev/usb/lp1`
 echo "\nOK MASTER\n\n\n" > templates/test.txt
 cat templates/test.txt > /dev/usb/lp0
 {% endhighlight %}
+
+* create a paper wallet
+
+{% highlight sh %}
+ruby paperbank.rb
+{% endhighlight %}
+
+Enter a password, your wallet private key will be protected. 
+To import your funds in another wallet you will need to provide the password.
+Generate a batch of paper wallet (5+), thest some of them with small sums (2+), use the rest!
+Paper wallet are good for cold offline storage, you can use traditional, non-IT security to protect your funds.
+
+
