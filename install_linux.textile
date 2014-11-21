@@ -59,7 +59,7 @@ by transferring this repo and the ruby gems via usb stick and installing them ma
 It's not really needed for non-big sums.
 
 {% highlight sh %}
-sudo chmod 0666 /dev/usb/lp1`
+sudo chmod 0666 /dev/usb/lp1
 {% endhighlight %}
 
 * test the printer
