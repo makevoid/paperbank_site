@@ -33,9 +33,10 @@ sudo apt-get install ruby1.9.1-dev -y
 sudo apt-get install libmagickcore-dev libmagickwand-dev -y
 {% endhighlight %}
 
-* get the code
+* install git and get the code (or "get the zip via github":https://github.com/makevoid/paperbank/archive/bip38.zip)
 
 {% highlight sh %}
+apt-get install git -y
 git clone https://github.com/makevoid/paperbank
 {% endhighlight %}
 
