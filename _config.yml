@@ -3,6 +3,8 @@ title: PaperBank
 email: makevoid@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Create paper wallet easily. Powered by Raspberry PI, linux and a USB thermal printer. It supports: bitcoin, litecoin, dogecoin, namecoin, bip38 (password protected wallets), vanitygen
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://paperbank.it" # the base hostname & protocol for your site
 twitter_username: makevoid
 github_username:  makevoid
 github_project_name:  paperbank
