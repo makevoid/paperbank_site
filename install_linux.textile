@@ -33,15 +33,6 @@ sudo apt-get install ruby1.9.1-dev -y
 sudo apt-get install libmagickcore-dev libmagickwand-dev -y
 {% endhighlight %}
 
-* install ruby gems
-
-{% highlight sh %}
-$ sudo gem install escper         --no-ri --no-rdoc
-$ sudo gem install rqrcode_png    --no-ri --no-rdoc
-$ sudo gem install bitcoin-ruby   --no-ri --no-rdoc
-$ sudo gem install ffi            --no-ri --no-rdoc
-{% endhighlight %}
-
 
 * install git and get the code (or "get the zip via github":https://github.com/makevoid/paperbank/archive/bip38.zip)
 
