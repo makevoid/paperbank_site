@@ -69,13 +69,26 @@ echo "\nOK MASTER\n\n\n" > templates/test.txt
 cat templates/test.txt > /dev/usb/lp0
 {% endhighlight %}
 
-* create a paper wallet
+* install ruby dependencies
+
+{% highlight sh %}
+gem i bundle 
+{% endhighlight %}
+
+if you don't have bundler installed already, then:
+
+{% highlight sh %}
+bundle
+{% endhighlight %}
+
+
+* to create a paper wallet
 
 {% highlight sh %}
 ruby paperbank.rb
 {% endhighlight %}
 
-Enter a password, your wallet private key will be protected. 
+Enter a password, your wallet private key will be protected. It will print two copies by default. The code it's really easy to edit to print more wallets or print on some more informations on them
 To import your funds in another wallet you will need to provide the password.
 Generate a batch of paper wallet (5+), thest some of them with small sums (2+), use the rest!
 Paper wallet are good for cold offline storage, you can use traditional, non-IT security to protect your funds.
