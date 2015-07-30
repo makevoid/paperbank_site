@@ -84,4 +84,10 @@ To import your funds in another wallet you will need to provide the password.
 Generate a batch of paper wallet (5+), thest some of them with small sums (2+), use the rest!
 Paper wallet are good for cold offline storage, you can use traditional, non-IT security to protect your funds.
 
+---
 
+{% highlight sh %}
+# on Fedora
+
+yum install ImageMagick-devel
+{% endhighlight %}
